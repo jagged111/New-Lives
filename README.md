@@ -1,6 +1,6 @@
 # Deep Life Sim (Terminal Python)
 
-A replayable text-based life simulation game inspired by BitLife, with deeper systems and anti-repetition mechanics.
+A replayable text-based life simulation game with **200+ weighted events**, deep crime risk/reward loops, named relationship characters, and **generational legacy gameplay**.
 
 ## Run
 
@@ -8,28 +8,24 @@ A replayable text-based life simulation game inspired by BitLife, with deeper sy
 python life_sim.py
 ```
 
-## Systems included
+## Highlights
 
-- Year-by-year life progression from birth to death.
+- Birth-to-death progression with yearly choices.
 - Core stats: Health, Happiness, Intelligence, Wealth, Social, Reputation.
-- Hidden systems: luck, charisma, resilience, risk tolerance.
-- Education: grades, school reputation, scholarships, dropout with delayed consequences.
-- Career: multiple tracks (professional, creator, underworld, blue-collar) with unique behavior.
-- Relationships: evolving NPCs with memory, trust, closeness, and independent life changes.
-- Anti-repetition design:
-  - weighted event pool
-  - event history repetition penalties
-  - rare chaos events
-  - chain events with delayed outcomes
-- Emergent narrative via memories and delayed consequences.
+- Hidden variables + habits + traits to avoid deterministic optimal paths.
+- 200+ event pool with weighted randomness, repetition penalties, and chain consequences.
+- Rare once-per-life black swan event.
+- Education, career, fame, social, family, romance, and finance contexts.
+- Deep crime progression:
+  - heists (small/major)
+  - gang rank escalation
+  - heat/record pressure
+  - police crackdowns, legal battles, prison time
+- Named characters for family/friends/partners/one-night stands with memories and evolving trust.
+- Children can be born naturally or unexpectedly; upon death you can continue as a child (new generation).
 
-## Expandability notes
+## Extending
 
-The code is intentionally organized around:
-
-- `GameState` (all player/world state)
-- `EventDef` (event metadata + choice handlers)
-- `_build_events()` and one method per event category
-- helper methods (`_apply`, `_risk_action`, etc.) for outcome logic
-
-Add new content by creating more `EventDef` methods and including them in `_build_events()`.
+- Add handcrafted events in `_build_events()`.
+- Expand procedural variety in `_generate_event_pool()`.
+- Add deeper NPC simulation in `_npc_world_tick()`.
