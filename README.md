@@ -1,6 +1,6 @@
 # Deep Life Sim (Terminal Python)
 
-A replayable text-based life simulation game with **200+ weighted events**, deep crime risk/reward loops, named relationship characters, and **generational legacy gameplay**.
+A text life simulator with a **yearly player action menu**, **224 total events**, deeper economy/crime systems, named NPC relationships, addictions, and generational legacy continuation.
 
 ## Run
 
@@ -8,24 +8,21 @@ A replayable text-based life simulation game with **200+ weighted events**, deep
 python life_sim.py
 ```
 
-## Highlights
+## Key Features
 
-- Birth-to-death progression with yearly choices.
+- Birth-to-death progression with optional continuation as a child.
 - Core stats: Health, Happiness, Intelligence, Wealth, Social, Reputation.
-- Hidden variables + habits + traits to avoid deterministic optimal paths.
-- 200+ event pool with weighted randomness, repetition penalties, and chain consequences.
-- Rare once-per-life black swan event.
-- Education, career, fame, social, family, romance, and finance contexts.
-- Deep crime progression:
-  - heists (small/major)
-  - gang rank escalation
-  - heat/record pressure
-  - police crackdowns, legal battles, prison time
-- Named characters for family/friends/partners/one-night stands with memories and evolving trust.
-- Children can be born naturally or unexpectedly; upon death you can continue as a child (new generation).
+- **Player agency menu** each year (15 actions): study/work, gym, socialize, romance, hustle, travel, gamble, crime menu, buy assets, invest, therapy, business, appearance upgrades, etc.
+- 200+ weighted events with repetition penalties and once-per-life rare event.
+- Deeper economy: assets, maintenance, passive income, debt growth, taxes, investments.
+- Deeper crime loops: pickpocket/heist/gang + police pressure, court outcomes, prison time.
+- Relationship manager: gifts/fights/reconcile/breakup, memory effects, child birth moments.
+- Addiction system: alcohol/drugs/gambling accumulation with withdrawal penalties.
+- Save/load support via pickle save files.
+- Ribbons/Achievements + legacy hall-of-fame summary.
 
-## Extending
+## Extend
 
-- Add handcrafted events in `_build_events()`.
-- Expand procedural variety in `_generate_event_pool()`.
-- Add deeper NPC simulation in `_npc_world_tick()`.
+- Add custom events in `_build_events()`.
+- Increase procedural variety in `_generate_event_pool()`.
+- Expand yearly activity actions in `_activity_menu()`.
